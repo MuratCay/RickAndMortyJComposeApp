@@ -64,8 +64,8 @@ dependencies {
     implementation(libs.androidx.ui.tooling.preview)
     implementation(libs.androidx.material3)
 
-    implementation(libs.androidx.navigation.fragment.ktx)
-    implementation(libs.androidx.navigation.ui.ktx)
+    implementation(libs.hilt.navigation.compose)
+    implementation(libs.navigation.compose)
     implementation(libs.glide)
     implementation(libs.timber)
     implementation(libs.hilt.android)
