@@ -26,25 +26,22 @@ class HomeViewModel @Inject constructor(
         loadCharacters(1)
     }
 
-    private fun loadCharacters(pageNumber: Int) {
-        viewModelScope.launch {
-            getCharactersUseCase.invoke(pageNumber, emptyMap()).asResource()
-                .onEach { characterPage ->
-                    when (characterPage) {
-                        is Resource.Success -> {
-                            _uiState.value =
-                                uiState.value.copy(characters = characterPage.data.characters)
-                        }
-
-                        is Resource.Loading -> {
-                            _uiState.value = uiState.value.copy(isLoading = true)
-                        }
-
-                        is Resource.Error -> {
-                            _uiState.value = uiState.value.copy(error = characterPage.exception)
-                        }
+    private fun loadCharacters(pageNumber: Int) = viewModelScope.launch {
+        getCharactersUseCase.invoke(pageNumber, emptyMap()).asResource().onEach { characterPage ->
+                when (characterPage) {
+                    is Resource.Success -> {
+                        _uiState.value =
+                            uiState.value.copy(characters = characterPage.data.characters)
                     }
-                }.launchIn(this)
-        }
+
+                    is Resource.Loading -> {
+                        _uiState.value = uiState.value.copy(isLoading = true)
+                    }
+
+                    is Resource.Error -> {
+                        _uiState.value = uiState.value.copy(error = characterPage.exception)
+                    }
+                }
+            }.launchIn(this)
     }
 }
