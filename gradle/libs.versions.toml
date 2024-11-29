@@ -1,18 +1,18 @@
 [versions]
-agp = "8.6.0"
-kotlin = "1.9.0"
-coreKtx = "1.13.1"
+agp = "8.6.1"
+kotlin = "2.0.21"
+coreKtx = "1.15.0"
 junit = "4.13.2"
 junitVersion = "1.2.1"
 espressoCore = "3.6.1"
 lifecycleRuntimeKtx = "2.8.7"
 activityCompose = "1.9.3"
-composeBom = "2024.10.01"
-safeArgs = "2.5.3"
-kotlinxSerialization = "1.5.1"
+composeBom = "2024.11.00"
+safeArgs = "2.8.4"
+kotlinxSerialization = "1.7.3"
 pluginSerialization = "1.8.21"
-hilt = "2.48"
-hiltPlugin = "2.48"
+hilt = "2.50"
+hiltPlugin = "2.50"
 navigationFragmentKtx = "2.7.6"
 navigationUiKtx = "2.7.6"
 lottie = "4.2.0"
@@ -22,9 +22,9 @@ gson = "2.10.1"
 okhttp = "4.12.0"
 logging-interceptor = "4.10.0"
 glide = "4.13.2"
-hilt-navigation-compose = "1.0.0"
-navigation-compose = "2.5.3"
-coil-compose = "2.4.0"
+hilt-navigation-compose = "1.2.0"
+navigation-compose = "2.8.4"
+coil-compose = "2.5.0"
 
 [libraries]
 androidx-core-ktx = { group = "androidx.core", name = "core-ktx", version.ref = "coreKtx" }
@@ -66,3 +66,4 @@ serialization = { id = "org.jetbrains.kotlin.plugin.serialization", version.ref 
 android-safeArgs = { id = "androidx.navigation.safeargs", version.ref = "safeArgs" }
 dagger-hilt = { id = "com.google.dagger.hilt.android", version.ref = "hiltPlugin" }
 kotlin-kapt = { id = "org.jetbrains.kotlin.kapt", version.ref = "kotlin" }
+kotlin-compose = { id = "org.jetbrains.kotlin.plugin.compose", version.ref = "kotlin" }

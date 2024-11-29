@@ -5,11 +5,12 @@ plugins {
     alias(libs.plugins.serialization)
     alias(libs.plugins.android.safeArgs)
     alias(libs.plugins.dagger.hilt)
+    alias(libs.plugins.kotlin.compose)
 }
 
 android {
     namespace = "com.muratcay.rickandmortyjcomposeapp"
-    compileSdk = 34
+    compileSdk = 35
 
     defaultConfig {
         applicationId = "com.muratcay.rickandmortyjcomposeapp"
